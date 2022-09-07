@@ -15,8 +15,8 @@ public class Main {
 		context.register(SpringConfig.class);
 		context.refresh();
 
-		Converter c = (Converter) context.getBean("ARSToUSDConverter");
-		System.out.println(c.convert(cantidad));
+		Converter con = (Converter) context.getBean("ARSToUSDConverter");
+		System.out.println("Su dinero convertido es: " + con.convert(cantidad));
 
 	}
 }
